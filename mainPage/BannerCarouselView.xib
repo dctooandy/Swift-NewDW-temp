@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xdf-A8-UCZ" customClass="BannerCarouselView" customModule="DreamWork" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GRr-qT-nGv">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t6c-rl-7KX">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-Cv-LDR">
+                    <rect key="frame" x="187.5" y="825" width="39" height="37"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WDG-Cv-LDR" firstAttribute="centerX" secondItem="xdf-A8-UCZ" secondAttribute="centerX" id="AQn-BX-NCa"/>
+                <constraint firstItem="WDG-Cv-LDR" firstAttribute="bottom" secondItem="AhC-2k-Kvc" secondAttribute="bottom" id="HRc-Hg-SfR"/>
+                <constraint firstItem="GRr-qT-nGv" firstAttribute="top" secondItem="AhC-2k-Kvc" secondAttribute="top" id="aFk-8q-LoB"/>
+                <constraint firstItem="AhC-2k-Kvc" firstAttribute="trailing" secondItem="GRr-qT-nGv" secondAttribute="trailing" id="cdq-PU-gUW"/>
+                <constraint firstItem="AhC-2k-Kvc" firstAttribute="bottom" secondItem="GRr-qT-nGv" secondAttribute="bottom" id="dRO-OO-fNH"/>
+                <constraint firstItem="GRr-qT-nGv" firstAttribute="leading" secondItem="AhC-2k-Kvc" secondAttribute="leading" id="oDX-x6-dKY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="AhC-2k-Kvc"/>
+            <connections>
+                <outlet property="bannerCollectionView" destination="GRr-qT-nGv" id="LcN-AG-Bcm"/>
+                <outlet property="pageControl" destination="WDG-Cv-LDR" id="nDH-He-SiT"/>
+            </connections>
+            <point key="canvasLocation" x="-26" y="-99"/>
+        </view>
+    </objects>
+</document>
